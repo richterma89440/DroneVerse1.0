@@ -1,0 +1,6 @@
+opencv-python
+mediapipe
+python_osc
+pygame
+djitellopy
+pyqt5
