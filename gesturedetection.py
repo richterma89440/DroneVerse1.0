@@ -59,7 +59,7 @@ def run_gesture_detection(direction_callback):
         if key & 0xFF == ord("q"):  # Beende die Schleife, wenn 'q' gedrückt wird
             break
 
-    cap.release()  # Gib die Ressourcen frei
+    cap.releas1e()  # Gib die Ressourcen frei
     cv2.destroyAllWindows()
 
 def draw_rois(frame, height, width, roi_top, roi_bottom, roi_middle_left, roi_middle_right):

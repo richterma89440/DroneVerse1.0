@@ -43,6 +43,11 @@ def direction_from_keyboard(direction):
 def send_direction_to_drone(direction):
     global drone_controller
 
+    drone_controller.speed_left_right = 0
+    drone_controller.speed_up_down = 0
+    drone_controller.speed_forward_back = 0
+    drone_controller.yaw_speed = 0
+
     if direction == "up":
         drone_controller.up()
     elif direction == "down":

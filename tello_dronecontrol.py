@@ -28,7 +28,7 @@ class TelloDroneController:
         
         self.takeoff() # Drohne hebt ab, sobald die Instanz erstellt wird
         
-        self.speed = 60 # Geschwindigkeit der Drohne
+        self.speed = 15 # Geschwindigkeit der Drohne
         
         
     
