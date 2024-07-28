@@ -33,3 +33,9 @@ class PrintDroneController:
 
     def stop(self):
         print("DRONE STOPS!", end="\r")
+    
+    def yaw_left(self):
+        print("DRONE YAWS LEFT!", end="\r")
+    
+    def yaw_right(self):
+        print("DRONE YAWS RIGHT!", end="\r")
