@@ -47,7 +47,6 @@ def send_direction_to_drone(direction):
         drone_controller.speed_left_right = 0
         drone_controller.speed_up_down = 0
         drone_controller.speed_forward_back = 0
-        drone_controller.yaw_speed = 0
 
     if direction == "up":
         drone_controller.up()
@@ -61,10 +60,6 @@ def send_direction_to_drone(direction):
         drone_controller.forward()
     elif direction == "backward":
         drone_controller.backward()
-    elif direction == "yaw_left":
-        drone_controller.yaw_left()
-    elif direction == "yaw_right":
-        drone_controller.yaw_right()
     elif direction == "stop":
         drone_controller.stop()
     else:

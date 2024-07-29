@@ -18,8 +18,6 @@ keys_pressed = {
     "takeoff": False,
     "forward": False,
     "backward": False,
-    "yaw_left": False,
-    "yaw_right": False,
 }
 
 def run_keyboard_control(direction_callback):
@@ -47,10 +45,6 @@ def run_keyboard_control(direction_callback):
                 elif event.key == pygame.K_DOWN:
                     keys_pressed["down"] = True
                 elif event.key == pygame.K_q:
-                    keys_pressed["yaw_left"] = True
-                elif event.key == pygame.K_e:
-                    keys_pressed["yaw_right"] = True
-                elif event.key == pygame.K_ESCAPE:
                     pygame.quit()
                     sys.exit()
                     
@@ -73,12 +67,6 @@ def run_keyboard_control(direction_callback):
                 elif event.key == pygame.K_DOWN:
                     keys_pressed["down"] = False
                     direction_callback("stop")
-                elif event.key == pygame.K_q:
-                    keys_pressed["yaw_left"] = False
-                    direction_callback("stop")
-                elif event.key == pygame.K_e:
-                    keys_pressed["yaw_right"] = False
-                    direction_callback("stop") 
 
         try:
             if keys_pressed["up"]:
@@ -93,10 +81,6 @@ def run_keyboard_control(direction_callback):
                 direction_callback("forward")
             if keys_pressed["backward"]:
                 direction_callback("backward")
-            if keys_pressed["yaw_left"]:
-                direction_callback("yaw_left")
-            if keys_pressed["yaw_right"]:
-                direction_callback("yaw_right")
         except Exception as e:
             print(f"Ein Fehler ist aufgetreten: {e}")
 

@@ -1,3 +1,7 @@
+# Sina Steinmüller
+# Maximilian Richter
+# Stand: 2024-07-26
+
 import cv2
 import mediapipe as mp
 import math
